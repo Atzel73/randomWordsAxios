@@ -1,7 +1,10 @@
 import { useState } from "react"; 
 import { StyleSheet, View, Text, Button } from "react-native"; 
 import axios from "axios"; 
-  
+import { getImg } from "./assets/imgFunction";
+
+
+
 export default function App() { 
     const [advice, setAdvice] = useState(""); 
   
@@ -26,6 +29,9 @@ export default function App() {
             <Text style={styles.advice}>{advice}</Text> 
             <Button title="Get Advice" 
                 onPress={getAdvice} color="green" /> 
+
+
+              {getImg()}
         </View> 
     ); 
 } 
